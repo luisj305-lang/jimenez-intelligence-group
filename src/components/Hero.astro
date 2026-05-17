@@ -1,6 +1,8 @@
 ---
 // Hero.astro — full-width hero with 12-col asymmetric grid
-// Image served from public/ via root-relative path (static build, no ESM import needed)
+// Image served from public/. Must be prefixed with import.meta.env.BASE_URL
+// so it resolves under the GitHub Pages base path (not the domain root).
+const portrait = `${import.meta.env.BASE_URL}assets/images/luis-jimenez.png`;
 ---
 
 <section class="max-w-max-width mx-auto px-gutter py-xl md:py-xxl">
@@ -9,7 +11,7 @@
     <!-- Portrait column: col-span-5 -->
     <div class="md:col-span-5 h-[500px] md:h-[700px] bg-warm-white relative border border-border-subtle">
       <img
-        src="/assets/images/luis-jimenez.png"
+        src={portrait}
         alt="Luis Jiménez Camacho"
         class="w-full h-full object-cover"
         width="600"
