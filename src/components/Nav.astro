@@ -1,5 +1,6 @@
 ---
 // Nav.astro — sticky navigation bar
+const home = import.meta.env.BASE_URL.replace(/\/$/, "") + "/";
 ---
 
 <nav
@@ -10,7 +11,7 @@
   <!-- Wordmark -->
   <a
     class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim"
-    href={import.meta.env.BASE_URL}
+    href={home}
   >
     Jimenez Intelligence Group
   </a>
