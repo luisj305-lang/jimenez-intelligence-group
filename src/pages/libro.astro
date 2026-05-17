@@ -1,0 +1,160 @@
+---
+// Libro page — Edición Aniversario 30 Años del libro de Luis Jiménez
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const AMAZON_URL = "https://www.amazon.com/s?k=tecnicas+y+secretos+del+investigador+privado+luis+jimenez";
+---
+
+<BaseLayout title="El Libro · Jimenez Intelligence Group">
+  <Nav />
+
+  <!-- ===== HERO ===== -->
+  <section class="max-w-max-width mx-auto px-gutter py-xl md:py-xxl">
+    <div class="font-metadata text-metadata text-steel mb-md uppercase tracking-wider">
+      EDICIÓN ANIVERSARIO · 1996 — 2026
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-xl items-start">
+
+      <!-- Cover column -->
+      <div class="md:col-span-5">
+        <div class="bg-warm-white border border-border-subtle p-xl aspect-[2/3] flex flex-col justify-between relative">
+          <span class="font-metadata text-metadata text-steel uppercase tracking-wider">
+            EDICIÓN ANIVERSARIO · 30 AÑOS
+          </span>
+          <div>
+            <div class="font-metadata text-metadata text-steel uppercase tracking-wider mb-sm">
+              LUIS JIMÉNEZ CAMACHO
+            </div>
+            <h1 class="font-display-lg-mobile md:font-display-md text-display-lg-mobile md:text-display-md text-primary leading-none">
+              Técnicas y Secretos del Investigador Privado
+            </h1>
+          </div>
+          <span class="font-metadata text-metadata text-steel uppercase tracking-wider">
+            CYBER QUEST EDITORIAL
+          </span>
+        </div>
+      </div>
+
+      <!-- Copy column -->
+      <div class="md:col-span-7">
+        <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-lg">
+          Tres décadas<br/>de oficio<br/>en 360 páginas.
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-md max-w-reading-width">
+          En 1996, Luis Jiménez Camacho publicó la primera edición de <em>Técnicas y Secretos del Investigador Privado</em>, un manual que rompió el silencio del gremio: contar cómo se investiga de verdad. Treinta años después, esta edición aniversario incorpora métodos OSINT modernos, casos reales anonimizados y herramientas que antes solo manejaban los profesionales.
+        </p>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-reading-width">
+          Escrito desde la trinchera de la investigación privada por un licenciado del Estado de Florida desde 1989. No es un libro académico: es un manual de campo.
+        </p>
+
+        <!-- Price grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-md mb-xl">
+          <div class="border border-border-subtle p-lg">
+            <div class="font-metadata text-metadata text-steel mb-sm uppercase tracking-wider">PDF DIRECTO</div>
+            <div class="font-headline-md text-headline-md text-primary">$19.99</div>
+            <div class="font-metadata text-metadata text-steel uppercase tracking-wider mt-sm">DESCARGA INMEDIATA</div>
+          </div>
+          <div class="border border-border-subtle p-lg">
+            <div class="font-metadata text-metadata text-steel mb-sm uppercase tracking-wider">KINDLE</div>
+            <div class="font-headline-md text-headline-md text-primary">$19.99</div>
+            <div class="font-metadata text-metadata text-steel uppercase tracking-wider mt-sm">VÍA AMAZON</div>
+          </div>
+          <div class="border border-border-subtle p-lg">
+            <div class="font-metadata text-metadata text-steel mb-sm uppercase tracking-wider">PAPERBACK</div>
+            <div class="font-headline-md text-headline-md text-primary">$24.99</div>
+            <div class="font-metadata text-metadata text-steel uppercase tracking-wider mt-sm">IMPRESO · USA</div>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-md">
+          <a
+            class="bg-ink-blue text-on-primary font-label-caps text-label-caps px-lg py-md rounded-none uppercase text-center hover:bg-ink-hover transition-colors duration-150"
+            href={AMAZON_URL}
+            target="_blank"
+            rel="noopener"
+          >
+            Comprar en Amazon
+          </a>
+          <a
+            class="ghost-button font-label-caps text-label-caps px-lg py-md rounded-none uppercase text-center transition-colors duration-150"
+            href="#intake"
+          >
+            Comprar PDF directo
+          </a>
+        </div>
+        <p class="font-metadata text-metadata text-steel uppercase tracking-wider mt-md">
+          ● Enlace Amazon de prueba · pendiente ASIN definitivo
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENIDO ===== -->
+  <section class="bg-warm-white border-y border-border-subtle">
+    <div class="max-w-max-width mx-auto px-gutter py-xxl">
+      <span class="font-metadata text-metadata text-steel mb-sm block uppercase tracking-wider">CONTENIDO</span>
+      <h2 class="font-headline-md text-headline-md text-primary mb-xl">Qué aprenderás.</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+        <div>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-md">▸ Cómo verificar la identidad real de una persona antes de hacer negocios con ella.</p>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-md">▸ Métodos OSINT (fuentes abiertas) que un civil puede aplicar sin ser técnico.</p>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-md">▸ Cómo detectar señales de fraude en redes sociales, propuestas comerciales y perfiles de citas.</p>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-md">▸ Qué hacer si crees que alguien te está investigando, suplantando o vigilando.</p>
+        </div>
+        <div>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-md">▸ Casos reales anonimizados de 30 años de oficio: paternidad, custodia, infidelidad, fraudes a adultos mayores.</p>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-md">▸ Cómo se construye una cadena de custodia legalmente válida.</p>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-md">▸ La diferencia crítica entre obtener información y obtener evidencia.</p>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-md">▸ Errores típicos que destruyen un caso antes de empezar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AUTOR ===== -->
+  <section class="max-w-max-width mx-auto px-gutter py-xxl">
+    <span class="font-metadata text-metadata text-steel mb-sm block uppercase tracking-wider">SOBRE EL AUTOR</span>
+    <h2 class="font-headline-md text-headline-md text-primary mb-lg">Luis Jiménez Camacho.</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant mb-md max-w-reading-width">
+      Investigador privado licenciado por el Estado de Florida desde 1989. Fundador de C.I.S. Investigations en Miami y autor original de <em>Técnicas y Secretos del Investigador Privado</em> en 1996.
+    </p>
+    <p class="font-body-lg text-body-lg text-on-surface-variant mb-md max-w-reading-width">
+      Sus casos han aparecido en Telemundo (María Laría, 1994), Primer Impacto, Sábado Gigante, Ocurrió Así, Miami Herald, La Cubanísima y Cadena Caracol. Localizó y rescató a una menor de 14 años en 24 horas y dirigió un rescate internacional de un niño secuestrado por su padre.
+    </p>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-reading-width">
+      Hoy reside en Clewiston, Florida, donde dirige Jimenez Intelligence Group.
+    </p>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="bg-warm-white border-y border-border-subtle">
+    <div class="max-w-max-width mx-auto px-gutter py-xxl text-center">
+      <span class="font-metadata text-metadata text-steel mb-sm block uppercase tracking-wider">DISPONIBLE</span>
+      <h2 class="font-headline-md text-headline-md text-primary mb-lg">
+        Treinta años de oficio,<br/>en tus manos.
+      </h2>
+      <div class="flex flex-col sm:flex-row gap-md justify-center">
+        <a
+          class="bg-ink-blue text-on-primary font-label-caps text-label-caps px-lg py-md rounded-none uppercase text-center hover:bg-ink-hover transition-colors duration-150"
+          href={AMAZON_URL}
+          target="_blank"
+          rel="noopener"
+        >
+          Comprar en Amazon
+        </a>
+        <a
+          class="ghost-button font-label-caps text-label-caps px-lg py-md rounded-none uppercase text-center transition-colors duration-150"
+          href="#intake"
+        >
+          Comprar PDF directo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

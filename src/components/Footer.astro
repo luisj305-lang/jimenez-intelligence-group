@@ -20,11 +20,9 @@
       <li>
         <a
           class="hover:text-primary transition-colors duration-150 uppercase"
-          href="#"
-          aria-label="Aviso Legal (próximamente)"
+          href={import.meta.env.BASE_URL.replace(/\/$/, "") + "/libro/"}
         >
-          {/* TODO: real route when legal page exists */}
-          Aviso Legal
+          El Libro
         </a>
       </li>
       <li>
@@ -64,7 +62,7 @@
   <!-- Bottom compliance strip -->
   <div class="w-full border-t border-border-subtle py-sm px-gutter">
     <p class="font-metadata text-metadata text-center text-steel uppercase max-w-max-width mx-auto">
-      © 2026 JIMENEZ INTELLIGENCE GROUP · LIC. CLASS C #C2700XXX · CLEWISTON, FL · TODOS LOS DERECHOS RESERVADOS
+      © 2026 JIMENEZ INTELLIGENCE GROUP · CLEWISTON, FL · TODOS LOS DERECHOS RESERVADOS
     </p>
   </div>
 
