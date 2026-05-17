@@ -1,0 +1,71 @@
+/* Self-hosted fonts via fontsource — no CDN */
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/playfair-display/400-italic.css';
+@import '@fontsource/montserrat/600.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/jetbrains-mono/400.css';
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base body styles — ported from Stitch <style> block */
+@layer base {
+  body {
+    background-color: #fdf8f5; /* surface */
+    color: #1c1b19; /* on-surface */
+  }
+
+  /* Focus-visible styles for all interactive elements (a11y — task 3.5) */
+  :focus-visible {
+    outline: 2px solid #1A2942; /* ink-blue */
+    outline-offset: 2px;
+  }
+}
+
+/* Component classes — ported from Stitch <style> block */
+@layer components {
+  .signature-rule {
+    width: 48px;
+    height: 3px;
+    background-color: #1A2942; /* ink-blue */
+    margin-bottom: 24px;
+  }
+
+  .ghost-button {
+    border: 1px solid #1A2942;
+    color: #1A2942;
+    background: transparent;
+  }
+
+  .ghost-button:hover {
+    background-color: #1A2942;
+    color: #ffffff;
+  }
+}
+
+/* Form focus styles — Stitch "zero glow" intent preserved (no blur/box-shadow),
+   but keyboard focus stays visible for WCAG 2.4.7. A sharp 2px outline is a
+   crisp editorial line, not a glow. Pointer focus stays clean via :focus-visible. */
+@layer utilities {
+  input:focus,
+  textarea:focus {
+    border-color: #1A2942 !important;
+    box-shadow: none !important;
+  }
+
+  input:focus:not(:focus-visible),
+  textarea:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #1A2942 !important;
+    outline-offset: 2px;
+  }
+}

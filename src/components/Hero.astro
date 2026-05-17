@@ -1,0 +1,61 @@
+---
+// Hero.astro — full-width hero with 12-col asymmetric grid
+// Image served from public/ via root-relative path (static build, no ESM import needed)
+---
+
+<section class="max-w-max-width mx-auto px-gutter py-xl md:py-xxl">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-xl items-center">
+
+    <!-- Portrait column: col-span-5 -->
+    <div class="md:col-span-5 h-[500px] md:h-[700px] bg-warm-white relative border border-border-subtle">
+      <img
+        src="/assets/images/luis-jimenez.png"
+        alt="Luis Jiménez Camacho"
+        class="w-full h-full object-cover"
+        width="600"
+        height="700"
+      />
+    </div>
+
+    <!-- Text column: col-span-7 -->
+    <div class="md:col-span-7 flex flex-col items-start">
+
+      <!-- Eyebrow -->
+      <div class="font-metadata text-metadata text-steel mb-md uppercase tracking-wider">
+        INVESTIGACIÓN PRIVADA · OSINT · EVIDENCIA LEGAL
+      </div>
+
+      <!-- H1 -->
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-lg">
+        La verdad<br />no se adivina.<br />Se investiga.
+      </h1>
+
+      <!-- Body -->
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-reading-width">
+        Desplegamos inteligencia táctica y análisis forense para corporaciones, firmas legales y clientes privados. Operamos bajo estricto protocolo de confidencialidad, transformando información difusa en evidencia accionable.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-md">
+        <a
+          class="bg-ink-blue text-on-primary font-label-caps text-label-caps px-lg py-md rounded-none uppercase text-center hover:bg-ink-hover transition-colors duration-150"
+          href="#intake"
+        >
+          Iniciar consulta
+        </a>
+        <a
+          class="ghost-button font-label-caps text-label-caps px-lg py-md rounded-none uppercase text-center transition-colors duration-150"
+          href="#servicios"
+        >
+          Áreas de práctica
+        </a>
+      </div>
+
+      <!-- Mono detail strip -->
+      <div class="mt-xl font-metadata text-metadata text-steel uppercase tracking-wider">
+        LIC. CLASS C #C2700XXX · FLORIDA, USA · EST. 2014
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,41 @@
+---
+// DirectorSection.astro — editorial two-column layout with marginalia + body
+---
+
+<section class="max-w-max-width mx-auto px-gutter py-xxl border-b border-border-subtle" id="director">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-xl">
+
+    <!-- Marginalia: col-span-4 -->
+    <div class="md:col-span-4 font-metadata text-metadata text-steel flex flex-col gap-md">
+      <div>
+        <span class="block uppercase">Director</span>
+        <span class="text-primary">Luis Jiménez Camacho</span>
+      </div>
+      <div>
+        <span class="block uppercase">Licencia</span>
+        <span class="text-primary">Class C (Florida)</span>
+      </div>
+      <div>
+        <span class="block uppercase">Idiomas</span>
+        <span class="text-primary">Español / English</span>
+      </div>
+      <div>
+        <span class="block uppercase">Sede Central</span>
+        <span class="text-primary">Clewiston, FL</span>
+      </div>
+    </div>
+
+    <!-- Editorial content: col-span-8 -->
+    <div class="md:col-span-8 flex flex-col items-start">
+      <div class="signature-rule"></div>
+      <h2 class="font-headline-md text-headline-md text-primary mb-md">Sobre el Director</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant mb-md max-w-reading-width">
+        Con más de una década de experiencia en el ámbito de la investigación privada, Luis Jiménez Camacho lidera Jimenez Intelligence Group bajo principios inquebrantables de rigor, discreción y legalidad. Su enfoque combina métodos tradicionales de recolección de evidencia con análisis OSINT avanzado.
+      </p>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-reading-width">
+        Operando desde Clewiston, FL, el director ha resuelto exitosamente cientos de casos complejos para firmas legales, corporaciones y clientes privados, consolidando a JIG como un referente en el sector de la inteligencia y el análisis forense.
+      </p>
+    </div>
+
+  </div>
+</section>

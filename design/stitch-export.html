@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jimenez Intelligence Group | Investigación Privada</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400&amp;family=Montserrat:wght@600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#04142c",
+                        "on-tertiary-container": "#91908a",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b8c7e7",
+                        "primary-container": "#1a2942",
+                        "on-error-container": "#93000a",
+                        "ink-hover": "#243557",
+                        "surface-variant": "#e6e2de",
+                        "on-secondary-fixed": "#0c1d29",
+                        "outline-variant": "#c5c6ce",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#1c1b19",
+                        "text-muted": "#6B6761",
+                        "inverse-surface": "#32302e",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#b7c9d9",
+                        "surface-bright": "#fdf8f5",
+                        "tertiary-fixed-dim": "#c9c6c0",
+                        "steel": "#7A8B9A",
+                        "on-secondary-container": "#546573",
+                        "on-surface-variant": "#44474d",
+                        "border-subtle": "#E0DDD8",
+                        "on-secondary-fixed-variant": "#384956",
+                        "on-primary-container": "#8290ae",
+                        "surface-container-low": "#f7f3ef",
+                        "surface-container-high": "#ece7e4",
+                        "outline": "#75777e",
+                        "secondary-fixed": "#d3e5f5",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "on-primary-fixed-variant": "#384762",
+                        "surface-container-highest": "#e6e2de",
+                        "surface-dim": "#ddd9d6",
+                        "background": "#fdf8f5",
+                        "surface-tint": "#505f7a",
+                        "warm-white": "#F5F3F0",
+                        "secondary": "#50606e",
+                        "tertiary-container": "#292925",
+                        "surface": "#fdf8f5",
+                        "on-primary-fixed": "#0b1b34",
+                        "inverse-primary": "#b8c7e7",
+                        "tertiary": "#151511",
+                        "on-tertiary-fixed-variant": "#474742",
+                        "primary-fixed": "#d6e3ff",
+                        "paper": "#F2EFE8",
+                        "tertiary-fixed": "#e5e2db",
+                        "on-surface": "#1c1b19",
+                        "inverse-on-surface": "#f5f0ec",
+                        "ink-pressed": "#0F1B2E",
+                        "secondary-container": "#d0e2f2",
+                        "ink-blue": "#1A2942",
+                        "surface-container": "#f2ede9",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "none": "0px"
+                    },
+                    "spacing": {
+                        "unit": "6px",
+                        "sm": "12px",
+                        "reading-width": "680px",
+                        "margin-mobile": "24px",
+                        "xxl": "96px",
+                        "xxxl": "128px",
+                        "xl": "64px",
+                        "max-width": "1200px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "xs": "6px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "tagline": ["Playfair Display"],
+                        "metadata": ["JetBrains Mono"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Montserrat"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.12em", "fontWeight": "600"}],
+                        "body-lg": ["19px", {"lineHeight": "1.75", "fontWeight": "400"}],
+                        "headline-sm": ["26px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "tagline": ["22px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "metadata": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-md": ["44px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["17px", {"lineHeight": "1.65", "fontWeight": "400"}],
+                        "label-sm": ["11px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "display-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #fdf8f5; /* surface */
+            color: #1c1b19; /* on-surface */
+        }
+        .signature-rule {
+            width: 48px;
+            height: 3px;
+            background-color: #1A2942; /* ink-blue */
+            margin-bottom: 24px;
+        }
+        .ghost-button {
+            border: 1px solid #1A2942;
+            color: #1A2942;
+            background: transparent;
+        }
+        .ghost-button:hover {
+            background-color: #1A2942;
+            color: #ffffff;
+        }
+        input:focus, textarea:focus {
+            border-color: #1A2942 !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<body class="antialiased font-body-md text-body-md flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 w-full flex justify-between items-center px-gutter py-sm max-w-max-width mx-auto bg-surface border-b border-outline-variant">
+<a class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim" href="#">
+            Jimenez Intelligence Group
+        </a>
+<div class="hidden md:flex items-center gap-lg">
+<ul class="flex gap-md font-label-caps text-label-caps">
+<li class=""><a class="text-on-surface-variant hover:text-ink-hover transition-colors duration-200 uppercase" href="#">Servicios</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-ink-hover transition-colors duration-200 uppercase" href="#">Sobre JIG</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-ink-hover transition-colors duration-200 uppercase" href="#">Recursos</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-ink-hover transition-colors duration-200 uppercase" href="#">Contacto</a></li>
+</ul>
+<a class="bg-ink-blue text-on-primary font-label-caps text-label-caps px-md py-sm rounded-none uppercase hover:bg-ink-hover transition-colors" href="#">
+                Consulta confidencial
+            </a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="max-w-max-width mx-auto px-gutter py-xl md:py-xxl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-xl items-center">
+<!-- Left: Portrait -->
+<div class="md:col-span-5 h-[500px] md:h-[700px] bg-warm-white relative border border-border-subtle">
+<img alt="Luis Jiménez Camacho" class="w-full h-full object-cover" src="assets/images/luis-jimenez.png"/>
+</div>
+<!-- Right: Content -->
+<div class="md:col-span-7 flex flex-col items-start">
+<div class="font-metadata text-metadata text-steel mb-md uppercase tracking-wider">
+                        INVESTIGACIÓN PRIVADA · OSINT · EVIDENCIA LEGAL
+                    </div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-lg">
+                        La verdad<br/>no se adivina.<br/>Se investiga.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-reading-width">
+                        Desplegamos inteligencia táctica y análisis forense para corporaciones, firmas legales y clientes privados. Operamos bajo estricto protocolo de confidencialidad, transformando información difusa en evidencia accionable.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-md">
+<a class="bg-ink-blue text-on-primary font-label-caps text-label-caps px-lg py-md rounded-none uppercase text-center hover:bg-ink-hover transition-colors" href="#intake">
+                            Iniciar consulta
+                        </a>
+<a class="ghost-button font-label-caps text-label-caps px-lg py-md rounded-none uppercase text-center transition-colors" href="#servicios">
+                            Áreas de práctica
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<div class="bg-warm-white border-y border-border-subtle">
+<div class="max-w-max-width mx-auto px-gutter py-lg">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg divide-y md:divide-y-0 md:divide-x divide-border-subtle">
+<div class="flex flex-col items-center text-center pt-md md:pt-0 px-md">
+<span class="font-metadata text-metadata text-steel mb-unit">ESTADO</span>
+<span class="font-headline-sm text-headline-sm text-primary">LIC. CLASS C #C2700XXX</span>
+</div>
+<div class="flex flex-col items-center text-center pt-md md:pt-0 px-md">
+<span class="font-metadata text-metadata text-steel mb-unit">OPERACIONES</span>
+<span class="font-headline-sm text-headline-sm text-primary">FLORIDA · USA</span>
+</div>
+<div class="flex flex-col items-center text-center pt-md md:pt-0 px-md">
+<span class="font-metadata text-metadata text-steel mb-unit">TRAYECTORIA</span>
+<span class="font-headline-sm text-headline-sm text-primary">CASOS RESUELTOS 120+</span>
+</div>
+<div class="flex flex-col items-center text-center pt-md md:pt-0 px-md">
+<span class="font-metadata text-metadata text-steel mb-unit">EXPERIENCIA</span>
+<span class="font-headline-sm text-headline-sm text-primary">EST. 2014</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sobre el Director Section -->
+<section class="max-w-max-width mx-auto px-gutter py-xxl border-b border-border-subtle" id="director">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-xl">
+<!-- Left: Marginalia -->
+<div class="md:col-span-4 font-metadata text-metadata text-steel flex flex-col gap-md">
+<div>
+<span class="block uppercase">Director</span>
+<span class="text-primary">Luis Jiménez Camacho</span>
+</div>
+<div>
+<span class="block uppercase">Licencia</span>
+<span class="text-primary">Class C (Florida)</span>
+</div>
+<div>
+<span class="block uppercase">Idiomas</span>
+<span class="text-primary">Español / English</span>
+</div>
+<div>
+<span class="block uppercase">Sede Central</span>
+<span class="text-primary">Clewiston, FL</span>
+</div>
+</div>
+<!-- Right: Editorial Content -->
+<div class="md:col-span-8 flex flex-col items-start">
+<div class="signature-rule"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-md">Sobre el Director</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md max-w-reading-width">
+                        Con más de una década de experiencia en el ámbito de la investigación privada, Luis Jiménez Camacho lidera Jimenez Intelligence Group bajo principios inquebrantables de rigor, discreción y legalidad. Su enfoque combina métodos tradicionales de recolección de evidencia con análisis OSINT avanzado.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-reading-width">
+                        Operando desde Clewiston, FL, el director ha resuelto exitosamente cientos de casos complejos para firmas legales, corporaciones y clientes privados, consolidando a JIG como un referente en el sector de la inteligencia y el análisis forense.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Service Cards -->
+<section class="max-w-max-width mx-auto px-gutter py-xxl" id="servicios">
+<div class="mb-xl">
+<span class="font-metadata text-metadata text-steel mb-sm block">01 · SERVICIOS PROFESIONALES</span>
+<div class="signature-rule"></div>
+<h2 class="font-headline-md text-headline-md text-primary">Áreas de Práctica</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-border-subtle p-xl flex flex-col h-full group hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow">
+<div class="signature-rule"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-md">Contrainteligencia Corporativa</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-xl">
+                        Auditorías de seguridad, prevención de espionaje industrial y evaluación de riesgos internos para proteger activos críticos y propiedad intelectual.
+                    </p>
+<a class="font-label-caps text-label-caps text-ink-blue uppercase flex items-center gap-unit group-hover:underline mt-auto" href="#">
+                        Ver Dossier ——›
+</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-border-subtle p-xl flex flex-col h-full group hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow">
+<div class="signature-rule"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-md">OSINT &amp; Digital Forensics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-xl">
+                        Inteligencia de fuentes abiertas y análisis forense digital profundo para rastrear huellas electrónicas, perfiles no declarados y redes de asociación.
+                    </p>
+<a class="font-label-caps text-label-caps text-ink-blue uppercase flex items-center gap-unit group-hover:underline mt-auto" href="#">
+                        Ver Dossier ——›
+</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-border-subtle p-xl flex flex-col h-full group hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow">
+<div class="signature-rule"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-md">Evidencia Legal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-xl">
+                        Recopilación rigurosa de testimonios, documentos y registros físicos diseñados para soportar escrutinio en litigios complejos y arbitrajes.
+                    </p>
+<a class="font-label-caps text-label-caps text-ink-blue uppercase flex items-center gap-unit group-hover:underline mt-auto" href="#">
+                        Ver Dossier ——›
+</a>
+</div>
+</div>
+</section>
+<!-- Intake Form -->
+<section class="bg-paper py-xxl border-t border-border-subtle" id="intake">
+<div class="max-w-reading-width mx-auto px-gutter">
+<div class="mb-xl text-center">
+<div class="signature-rule mx-auto"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-sm">Consulta Confidencial</h2>
+<p class="font-metadata text-metadata text-steel uppercase">FORMULARIO DE ADMISIÓN · PROTOCOLO SEGURO</p>
+</div>
+<form class="space-y-xl bg-warm-white p-xl border border-border-subtle">
+<!-- Section 01 -->
+<div>
+<h4 class="font-metadata text-metadata text-steel mb-lg pb-sm border-b border-border-subtle">01 DATOS DEL SOLICITANTE</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-xs">Nombre Completo</label>
+<input class="bg-transparent border border-border-subtle rounded-none p-sm font-body-md text-primary w-full" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-xs">Entidad / Organización</label>
+<input class="bg-transparent border border-border-subtle rounded-none p-sm font-body-md text-primary w-full" type="text"/>
+</div>
+<div class="flex flex-col md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-xs">Correo Electrónico Seguro</label>
+<input class="bg-transparent border border-border-subtle rounded-none p-sm font-body-md text-primary w-full" type="email"/>
+</div>
+</div>
+</div>
+<!-- Section 02 -->
+<div>
+<h4 class="font-metadata text-metadata text-steel mb-lg pb-sm border-b border-border-subtle">02 NATURALEZA DEL CASO</h4>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-xs">Breve Descripción (Evite detalles sensibles)</label>
+<textarea class="bg-transparent border border-border-subtle rounded-none p-sm font-body-md text-primary w-full resize-none" rows="4"></textarea>
+</div>
+</div>
+<div class="pt-lg border-t border-border-subtle flex justify-end">
+<button class="bg-ink-blue text-on-primary font-label-caps text-label-caps px-xl py-md rounded-none uppercase hover:bg-ink-hover transition-colors w-full md:w-auto" type="submit">
+                            Transmitir Solicitud
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-paper border-t border-outline-variant">
+<div class="px-gutter py-xl flex flex-col md:flex-row justify-between items-start gap-md max-w-max-width mx-auto">
+<div class="flex flex-col gap-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">
+                Jimenez Intelligence Group
+            </span>
+<span class="font-tagline text-lg italic text-on-surface-variant">
+                "La verdad no se adivina. Se investiga."
+            </span>
+</div>
+<ul class="flex flex-wrap gap-xl font-label-caps text-label-caps text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors uppercase" href="#">AVISO LEGAL</a></li>
+<li class=""><a class="hover:text-primary transition-colors uppercase" href="#">PRIVACIDAD</a></li>
+<li class=""><a class="hover:text-primary transition-colors uppercase" href="#">OSINT PROTOCOL</a></li>
+<li class=""><a class="hover:text-primary transition-colors uppercase" href="#">DOSSIER</a></li>
+</ul>
+</div>
+<div class="w-full border-t border-border-subtle py-sm px-gutter">
+<p class="font-metadata text-metadata text-center text-steel uppercase max-w-max-width mx-auto">
+            © 2026 JIMENEZ INTELLIGENCE GROUP · LIC. CLASS C #C2700XXX · CLEWISTON, FL · TODOS LOS DERECHOS RESERVADOS
+        </p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,38 @@
+---
+// index.astro — page composition in Stitch order
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import TrustBar from '../components/TrustBar.astro';
+import DirectorSection from '../components/DirectorSection.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import IntakeForm from '../components/IntakeForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!--
+  GRAYSCALE TEST — Task 3.9 (PASS)
+  Reasoning: Page hierarchy reads as authoritative/clear when rendered in grayscale.
+  - H1 (Playfair, display size) > H2 (headline-md) > H3 (headline-sm) > body/metadata type scale
+    carries structure via size alone — no reliance on color for heading distinction.
+  - Hero portrait photo converts to editorial black-and-white; adds gravitas, not confusion.
+  - CTA buttons: filled (dark fill + white text) vs ghost (outline + dark text) — contrast
+    distinction survives grayscale because it is fill vs no-fill, not color vs color.
+  - Signature-rule (3px dark horizontal bar) reads as a typographic divider in grayscale.
+  - TrustBar: small mono label above larger Playfair value — size hierarchy, not color.
+  - No information is conveyed exclusively by ink-blue accent (e.g., no "required fields
+    are shown in blue" or similar color-only semantics).
+  - Design is editorial/typographic-first; meets spec criterion: authoritative/clear,
+    does not look like a SaaS landing in grayscale.
+-->
+<BaseLayout>
+  <Nav />
+  <main role="main">
+    <Hero />
+    <TrustBar />
+    <DirectorSection />
+    <ServiceCards />
+    <IntakeForm />
+  </main>
+  <Footer />
+</BaseLayout>

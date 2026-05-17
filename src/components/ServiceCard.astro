@@ -1,0 +1,28 @@
+---
+// ServiceCard.astro — individual service card with hover shadow
+interface Props {
+  area: string;
+  title: string;
+  body: string;
+}
+const { area, title, body } = Astro.props;
+---
+
+<div class="bg-surface-container-lowest border border-border-subtle p-xl flex flex-col h-full group hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow duration-150">
+  <div class="signature-rule"></div>
+  <!-- Mono eyebrow: area label -->
+  <span class="font-metadata text-metadata text-steel uppercase mb-sm block">{area}</span>
+  <!-- Playfair H3 -->
+  <h3 class="font-headline-sm text-headline-sm text-primary mb-md">{title}</h3>
+  <!-- Inter body -->
+  <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-xl">{body}</p>
+  <!-- CTA link -->
+  <a
+    class="font-label-caps text-label-caps text-ink-blue uppercase flex items-center gap-unit group-hover:underline mt-auto"
+    href="#"
+    aria-label={`Ver dossier: ${title}`}
+  >
+    {/* TODO: real route per service when detail pages exist */}
+    Ver Dossier ——›
+  </a>
+</div>

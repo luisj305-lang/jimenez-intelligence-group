@@ -1,0 +1,38 @@
+---
+// ServiceCards.astro — 3-column services grid with editorial header
+import ServiceCard from './ServiceCard.astro';
+
+const cards = [
+  {
+    area: '01 · CONTRAINTELIGENCIA',
+    title: 'Contrainteligencia Corporativa',
+    body: 'Auditorías de seguridad, prevención de espionaje industrial y evaluación de riesgos internos para proteger activos críticos y propiedad intelectual.',
+  },
+  {
+    area: '02 · OSINT & FORENSE',
+    title: 'OSINT & Digital Forensics',
+    body: 'Inteligencia de fuentes abiertas y análisis forense digital profundo para rastrear huellas electrónicas, perfiles no declarados y redes de asociación.',
+  },
+  {
+    area: '03 · EVIDENCIA',
+    title: 'Evidencia Legal',
+    body: 'Recopilación rigurosa de testimonios, documentos y registros físicos diseñados para soportar escrutinio en litigios complejos y arbitrajes.',
+  },
+];
+---
+
+<section class="max-w-max-width mx-auto px-gutter py-xxl" id="servicios">
+  <!-- Section header -->
+  <div class="mb-xl">
+    <span class="font-metadata text-metadata text-steel mb-sm block">01 · SERVICIOS PROFESIONALES</span>
+    <div class="signature-rule"></div>
+    <h2 class="font-headline-md text-headline-md text-primary">Áreas de Práctica</h2>
+  </div>
+
+  <!-- 3-column card grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+    {cards.map((card) => (
+      <ServiceCard area={card.area} title={card.title} body={card.body} />
+    ))}
+  </div>
+</section>
